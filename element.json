@@ -1,0 +1,75 @@
+{
+    "@import": "./element.php",
+    "name": "jiga-shopify",
+    "title": "JiGa Shopify",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+     "container": true,
+    "width": 500,
+    "templates": {
+        "render": "./templates/template.php",
+        "content": "./templates/content.php"
+    },
+    "placeholder": {
+        "props": {
+            "content": "Example Content"
+        }
+    },
+    "fields": {
+        "content": {
+            "label": "Content",
+            "type": "textarea",
+            "source": true
+        },
+        "visibility": "${builder.visibility}",
+        "status": "${builder.statusItem}",
+        "source": "${builder.source}"
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [
+                {
+                    "title": "Content",
+                    "fields": [
+                        "content"
+                    ]
+                },
+                {
+                    "title": "Settings",
+                    "fields": [
+                        {
+                            "label": "General",
+                            "type": "group",
+                            "fields": [
+                                "position",
+                                "position_left",
+                                "position_right",
+                                "position_top",
+                                "position_bottom",
+                                "position_z_index",
+                                "margin",
+                                "margin_remove_top",
+                                "margin_remove_bottom",
+                                "maxwidth",
+                                "maxwidth_breakpoint",
+                                "block_align",
+                                "block_align_breakpoint",
+                                "block_align_fallback",
+                                "text_align",
+                                "text_align_breakpoint",
+                                "text_align_fallback",
+                                "item_animation",
+                                "_parallax_button",
+                                "visibility"
+                            ]
+                        }
+                    ]
+                },
+                "${builder.advancedItem}"
+            ]
+        }
+    }
+}
+
